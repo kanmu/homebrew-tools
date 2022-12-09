@@ -5,21 +5,21 @@
 class Prmdg < Formula
   desc "prmd style JSON Hyper Schema to Go structs, and validators"
   homepage "https://github.com/kanmu/prmdg"
-  version "0.2.0"
+  version "1.0.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/kanmu/prmdg/releases/download/v0.2.0/prmdg_0.2.0_darwin_arm64.tar.gz"
-      sha256 "193590d49e6533666dd0eef108eeffcef9b8f93989609aa511ead0bce74f307f"
+    if Hardware::CPU.intel?
+      url "https://github.com/kanmu/prmdg/releases/download/v1.0.0/prmdg_1.0.0_darwin_amd64.tar.gz"
+      sha256 "aefe5bf175d11e300361ccae6b403a73a09438b19550c3f36760a3053ca319c2"
 
       def install
         bin.install 'prmdg'
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kanmu/prmdg/releases/download/v0.2.0/prmdg_0.2.0_darwin_amd64.tar.gz"
-      sha256 "54c8abc4cc3b0e3e46d53b0bddbe1265fe45bebee574616967215efa79bdb24e"
+    if Hardware::CPU.arm?
+      url "https://github.com/kanmu/prmdg/releases/download/v1.0.0/prmdg_1.0.0_darwin_arm64.tar.gz"
+      sha256 "74a32549593fa7ddab7e211f6c38d5225123a04e1de7f95e751597d5939de0d7"
 
       def install
         bin.install 'prmdg'
@@ -28,17 +28,17 @@ class Prmdg < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/kanmu/prmdg/releases/download/v0.2.0/prmdg_0.2.0_linux_amd64.tar.gz"
-      sha256 "6043805630a0707eb3e13a6343ea02454da01123f4069f58579df23adaefc0cb"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kanmu/prmdg/releases/download/v1.0.0/prmdg_1.0.0_linux_arm64.tar.gz"
+      sha256 "c8bcaaf1ca7e5c4dc37bb47ecc48e2b70d474ba53cabae55ad69b648b03dc05b"
 
       def install
         bin.install 'prmdg'
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kanmu/prmdg/releases/download/v0.2.0/prmdg_0.2.0_linux_arm64.tar.gz"
-      sha256 "f4f8056975d7bc7ff12828c56b53db105e56825b8ff9c1009a67c82ac3b1e707"
+    if Hardware::CPU.intel?
+      url "https://github.com/kanmu/prmdg/releases/download/v1.0.0/prmdg_1.0.0_linux_amd64.tar.gz"
+      sha256 "1b21b736d7898d51f3e0dac69500b31178c462805fefabcfc9a16b15f531e6ee"
 
       def install
         bin.install 'prmdg'
