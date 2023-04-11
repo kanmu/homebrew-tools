@@ -5,21 +5,21 @@
 class Demitas2 < Formula
   desc "Wrapper for ecspresso that creates task definitions at run time."
   homepage "https://github.com/kanmu/demitas2"
-  version "4.1.0"
+  version "4.2.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/kanmu/demitas2/releases/download/v4.1.0/demitas2_4.1.0_darwin_amd64.tar.gz"
-      sha256 "8e0f27b75c8970e50711656277439fa519165177e98b36647333daece170530d"
+    if Hardware::CPU.arm?
+      url "https://github.com/kanmu/demitas2/releases/download/v4.2.0/demitas2_4.2.0_darwin_arm64.tar.gz"
+      sha256 "fe41f614c033826b7956c5eb0775f8be1e3ec87c816a2f3ebfc2f38b14442a57"
 
       def install
         bin.install 'dmts'
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/kanmu/demitas2/releases/download/v4.1.0/demitas2_4.1.0_darwin_arm64.tar.gz"
-      sha256 "26f9fa27b10dce2222d2c2a7da65cf65ddbf30b4f2561b652fed95921f00707d"
+    if Hardware::CPU.intel?
+      url "https://github.com/kanmu/demitas2/releases/download/v4.2.0/demitas2_4.2.0_darwin_amd64.tar.gz"
+      sha256 "d4f9bf8a6c9533c6807fcbe4cba1c085a8d696052c4e7a9ae42e91115d7db924"
 
       def install
         bin.install 'dmts'
@@ -28,17 +28,17 @@ class Demitas2 < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kanmu/demitas2/releases/download/v4.1.0/demitas2_4.1.0_linux_arm64.tar.gz"
-      sha256 "18b7489aa9f2e41f938f7206d9d7b36d867e81c15bc94958fbcfa6406c2f7d31"
+    if Hardware::CPU.intel?
+      url "https://github.com/kanmu/demitas2/releases/download/v4.2.0/demitas2_4.2.0_linux_amd64.tar.gz"
+      sha256 "294d181a70a6d1ed0322fdfcc597858b25945be7bade36fa8f0b1dc026f0f699"
 
       def install
         bin.install 'dmts'
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kanmu/demitas2/releases/download/v4.1.0/demitas2_4.1.0_linux_amd64.tar.gz"
-      sha256 "89975cfae6934d486c7803d7ff0a3b6b78155c05e65716a370e0f1058a10dd80"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kanmu/demitas2/releases/download/v4.2.0/demitas2_4.2.0_linux_arm64.tar.gz"
+      sha256 "c2a631c7b529a404ab35e2f9837302d0692aee22f023de33b1ec67d776d5f6eb"
 
       def install
         bin.install 'dmts'
