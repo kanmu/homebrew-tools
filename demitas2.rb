@@ -5,21 +5,21 @@
 class Demitas2 < Formula
   desc "Wrapper for ecspresso that creates task definitions at run time."
   homepage "https://github.com/kanmu/demitas2"
-  version "4.4.0"
+  version "4.4.1"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/kanmu/demitas2/releases/download/v4.4.0/demitas2_4.4.0_darwin_arm64.tar.gz"
-      sha256 "12fc4701f7a772780a4ed49eae271204e86adadd1a4095bf94da5866fb0ba2db"
+    if Hardware::CPU.intel?
+      url "https://github.com/kanmu/demitas2/releases/download/v4.4.1/demitas2_4.4.1_darwin_amd64.tar.gz"
+      sha256 "361500a7ea579d2f74cac36af553b8b7100a5ca81304276ee14b4e67e31556e1"
 
       def install
         bin.install 'dmts'
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kanmu/demitas2/releases/download/v4.4.0/demitas2_4.4.0_darwin_amd64.tar.gz"
-      sha256 "5172ea4fdecf1878653af6fc9da4e5f50f4bbf586d4e1e7b6fd7c5fa01599a59"
+    if Hardware::CPU.arm?
+      url "https://github.com/kanmu/demitas2/releases/download/v4.4.1/demitas2_4.4.1_darwin_arm64.tar.gz"
+      sha256 "e7dd883188245b3abe1c37d548a4c3fd0d83cda148b2a5536a547fb17148fb10"
 
       def install
         bin.install 'dmts'
@@ -28,17 +28,17 @@ class Demitas2 < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/kanmu/demitas2/releases/download/v4.4.0/demitas2_4.4.0_linux_amd64.tar.gz"
-      sha256 "87b53d177f4e776a4b831ab4e6d15f53dd96f94543d952b4adfe7923fb6c9f9d"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kanmu/demitas2/releases/download/v4.4.1/demitas2_4.4.1_linux_arm64.tar.gz"
+      sha256 "d31a707271a633ebb290fdc300cb781a80aeb9d3d559a72a33c2876e8e9fc354"
 
       def install
         bin.install 'dmts'
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kanmu/demitas2/releases/download/v4.4.0/demitas2_4.4.0_linux_arm64.tar.gz"
-      sha256 "03b89249dc854409fd283f41ccb47045cc3491cb8b726b0280ce6ad4013c1b85"
+    if Hardware::CPU.intel?
+      url "https://github.com/kanmu/demitas2/releases/download/v4.4.1/demitas2_4.4.1_linux_amd64.tar.gz"
+      sha256 "d383bbafe7eab6b751446a94380298cc538f9006c8a02c32128b3a3698a995d3"
 
       def install
         bin.install 'dmts'
