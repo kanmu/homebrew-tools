@@ -5,21 +5,21 @@
 class Jhol < Formula
   desc "CLI to display and check Japanese holidays."
   homepage "https://github.com/kanmu/jhol"
-  version "2.1.0"
+  version "2.2.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/kanmu/jhol/releases/download/v2.1.0/jhol_2.1.0_darwin_arm64.tar.gz"
-      sha256 "58bac15e7ced21096ded4d8b4f7b13545c30f2ece09482e3278bb5448fe7131b"
+    if Hardware::CPU.intel?
+      url "https://github.com/kanmu/jhol/releases/download/v2.2.0/jhol_2.2.0_darwin_amd64.tar.gz"
+      sha256 "7bd1f669e4d1e04674cc8cb0de7f2c199511230aa6d95feb8e4187de1ef4364b"
 
       def install
         bin.install 'jhol'
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kanmu/jhol/releases/download/v2.1.0/jhol_2.1.0_darwin_amd64.tar.gz"
-      sha256 "0eb2d8843e7f6caa77bc5e4a7a68e53c4ada9cf32b04a21ee007a706465ff368"
+    if Hardware::CPU.arm?
+      url "https://github.com/kanmu/jhol/releases/download/v2.2.0/jhol_2.2.0_darwin_arm64.tar.gz"
+      sha256 "8568811c49f7bec8b57906cb4aa3d3a8b2621df26b8a9db9368f7e2027c7609c"
 
       def install
         bin.install 'jhol'
@@ -28,17 +28,17 @@ class Jhol < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/kanmu/jhol/releases/download/v2.1.0/jhol_2.1.0_linux_amd64.tar.gz"
-      sha256 "2a41e9c74bf8479a1f906878e55c3c440c67e0490f72940337a10766b21063fb"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kanmu/jhol/releases/download/v2.2.0/jhol_2.2.0_linux_arm64.tar.gz"
+      sha256 "210bcef33e2d41dbd717a2bf0d00294e06061465e294d9f2234e5c90cfb0f281"
 
       def install
         bin.install 'jhol'
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kanmu/jhol/releases/download/v2.1.0/jhol_2.1.0_linux_arm64.tar.gz"
-      sha256 "6c816fc278deb053dc67e47ffbd6a6e5038fac1805c0d6faf56bb1882847ba10"
+    if Hardware::CPU.intel?
+      url "https://github.com/kanmu/jhol/releases/download/v2.2.0/jhol_2.2.0_linux_amd64.tar.gz"
+      sha256 "54ed5c5017136a8689ac0df54e9cd70f527467615f888205fdd4a22b39d40619"
 
       def install
         bin.install 'jhol'
