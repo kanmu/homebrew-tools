@@ -5,21 +5,21 @@
 class Jhol < Formula
   desc "CLI to display and check Japanese holidays."
   homepage "https://github.com/kanmu/jhol"
-  version "2.2.0"
+  version "2.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kanmu/jhol/releases/download/v2.2.0/jhol_2.2.0_darwin_amd64.tar.gz"
-      sha256 "7bd1f669e4d1e04674cc8cb0de7f2c199511230aa6d95feb8e4187de1ef4364b"
+      url "https://github.com/kanmu/jhol/releases/download/v2.2.1/jhol_2.2.1_darwin_amd64.tar.gz"
+      sha256 "22d8529dba31490db4f7d62585f68f0434eef6927df00a5ba78000bb33076301"
 
       def install
         bin.install 'jhol'
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kanmu/jhol/releases/download/v2.2.0/jhol_2.2.0_darwin_arm64.tar.gz"
-      sha256 "8568811c49f7bec8b57906cb4aa3d3a8b2621df26b8a9db9368f7e2027c7609c"
+      url "https://github.com/kanmu/jhol/releases/download/v2.2.1/jhol_2.2.1_darwin_arm64.tar.gz"
+      sha256 "82b78ee6728f22a3fa3a1add8458ca692efae5493157bbea7f2b3e7eca403930"
 
       def install
         bin.install 'jhol'
@@ -29,16 +29,16 @@ class Jhol < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kanmu/jhol/releases/download/v2.2.0/jhol_2.2.0_linux_arm64.tar.gz"
-      sha256 "210bcef33e2d41dbd717a2bf0d00294e06061465e294d9f2234e5c90cfb0f281"
+      url "https://github.com/kanmu/jhol/releases/download/v2.2.1/jhol_2.2.1_linux_arm64.tar.gz"
+      sha256 "08adf79b5eab3b10cb2dcab879f5bc133e2b4a1e0176bfa54e0a55951f536186"
 
       def install
         bin.install 'jhol'
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kanmu/jhol/releases/download/v2.2.0/jhol_2.2.0_linux_amd64.tar.gz"
-      sha256 "54ed5c5017136a8689ac0df54e9cd70f527467615f888205fdd4a22b39d40619"
+      url "https://github.com/kanmu/jhol/releases/download/v2.2.1/jhol_2.2.1_linux_amd64.tar.gz"
+      sha256 "45ab7c5858bcd6d0ba0033af3c9450f635de92e991ddf2e1ce4f834d77115105"
 
       def install
         bin.install 'jhol'
