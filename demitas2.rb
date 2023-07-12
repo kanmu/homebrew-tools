@@ -5,21 +5,21 @@
 class Demitas2 < Formula
   desc "Wrapper for ecspresso that creates task definitions at run time."
   homepage "https://github.com/kanmu/demitas2"
-  version "5.0.0"
+  version "5.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kanmu/demitas2/releases/download/v5.0.0/demitas2_5.0.0_darwin_amd64.tar.gz"
-      sha256 "8f812010083f29931383ab39bf7a45ee6a5cb95abd99b6f36355aa42fe81f72e"
+      url "https://github.com/kanmu/demitas2/releases/download/v5.1.0/demitas2_5.1.0_darwin_amd64.tar.gz"
+      sha256 "931190b898f047ce357db563190f5e22c9176d9a38ada7641b09d63e6bfb565c"
 
       def install
         bin.install 'dmts'
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kanmu/demitas2/releases/download/v5.0.0/demitas2_5.0.0_darwin_arm64.tar.gz"
-      sha256 "43147e96fb3179e604b77c4d4d4b52fabe0a76885f4b0b3e1ae0c2aeb52de719"
+      url "https://github.com/kanmu/demitas2/releases/download/v5.1.0/demitas2_5.1.0_darwin_arm64.tar.gz"
+      sha256 "db54f664940b2b1023b0191299e32a0296d65c36f2c778ef0a92a4204c0963f8"
 
       def install
         bin.install 'dmts'
@@ -29,16 +29,16 @@ class Demitas2 < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kanmu/demitas2/releases/download/v5.0.0/demitas2_5.0.0_linux_arm64.tar.gz"
-      sha256 "4a9732fd867b5f506f63896b62b2bd4a1e19ea9cd03b4bc045b209ccce7d316a"
+      url "https://github.com/kanmu/demitas2/releases/download/v5.1.0/demitas2_5.1.0_linux_arm64.tar.gz"
+      sha256 "85c7824419469eaf2a8aff6d2093506c2f13082cf6e03f7255b3a1b8e72338d9"
 
       def install
         bin.install 'dmts'
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kanmu/demitas2/releases/download/v5.0.0/demitas2_5.0.0_linux_amd64.tar.gz"
-      sha256 "fc962091fcb005908a96c35b2a44db88e70aa9b5c516315e879e99514eda3c12"
+      url "https://github.com/kanmu/demitas2/releases/download/v5.1.0/demitas2_5.1.0_linux_amd64.tar.gz"
+      sha256 "cbaefe7474d9467d15133fe9b6e312f558c79563afff0ffd3e882c3377d7d239"
 
       def install
         bin.install 'dmts'
