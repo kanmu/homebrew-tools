@@ -5,21 +5,21 @@
 class Kasa < Formula
   desc "CLI for esa."
   homepage "https://github.com/kanmu/kasa"
-  version "1.3.5"
+  version "1.3.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kanmu/kasa/releases/download/v1.3.5/kasa_1.3.5_darwin_amd64.tar.gz"
-      sha256 "0237e20e9463ac32d64beab20937176a5159c4af8b85d3d61adf56a0ed775d26"
+      url "https://github.com/kanmu/kasa/releases/download/v1.3.6/kasa_1.3.6_darwin_amd64.tar.gz"
+      sha256 "fddaa841a2b51feca9bb24339276d69641e84c55caa11336c14ad12715e1f6a1"
 
       def install
         bin.install 'kasa'
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kanmu/kasa/releases/download/v1.3.5/kasa_1.3.5_darwin_arm64.tar.gz"
-      sha256 "7001c779b65201827c60d8d90e3e546d80f08254162dccfd4faedaab654f4224"
+      url "https://github.com/kanmu/kasa/releases/download/v1.3.6/kasa_1.3.6_darwin_arm64.tar.gz"
+      sha256 "fe01c2611b506d03bdd1c6d194e6b87e579ba065f13f49ebfc2686f91c465ce0"
 
       def install
         bin.install 'kasa'
@@ -29,16 +29,16 @@ class Kasa < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/kanmu/kasa/releases/download/v1.3.5/kasa_1.3.5_linux_amd64.tar.gz"
-      sha256 "27460d75c471b82db1686ca306d00e08cc2e0cbc5f3bd7f4faf925cb940e0e21"
+      url "https://github.com/kanmu/kasa/releases/download/v1.3.6/kasa_1.3.6_linux_amd64.tar.gz"
+      sha256 "45e001fedb75e7aded8bac8bc9e4fab6fbcde12df5b3cd0dc76ddd82b4db642d"
 
       def install
         bin.install 'kasa'
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kanmu/kasa/releases/download/v1.3.5/kasa_1.3.5_linux_arm64.tar.gz"
-      sha256 "2a4bdc77ea0a606dbe1bf0fc15e1e69dd0a173905a6d3d4ea3346d0d8e692747"
+      url "https://github.com/kanmu/kasa/releases/download/v1.3.6/kasa_1.3.6_linux_arm64.tar.gz"
+      sha256 "96183b343226857003f7f3620449308def98e2a2c87db0e09033e47b60651a98"
 
       def install
         bin.install 'kasa'
