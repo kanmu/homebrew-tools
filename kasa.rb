@@ -5,21 +5,21 @@
 class Kasa < Formula
   desc "CLI for esa."
   homepage "https://github.com/kanmu/kasa"
-  version "1.2.0"
+  version "1.3.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/kanmu/kasa/releases/download/v1.2.0/kasa_1.2.0_darwin_amd64.tar.gz"
-      sha256 "9a4651815a0c224277ac572e2120a729e0fe214b25d330b066777eb3c886e5b0"
+    if Hardware::CPU.arm?
+      url "https://github.com/kanmu/kasa/releases/download/v1.3.0/kasa_1.3.0_darwin_arm64.tar.gz"
+      sha256 "c0480848626695db541f7c0b60197046fb6a99998a9623e486ca943c90414b8c"
 
       def install
         bin.install 'kasa'
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/kanmu/kasa/releases/download/v1.2.0/kasa_1.2.0_darwin_arm64.tar.gz"
-      sha256 "f68ec57fb34e84da44af68642fb8c49ad1572cd0185051475841b0bce123abb5"
+    if Hardware::CPU.intel?
+      url "https://github.com/kanmu/kasa/releases/download/v1.3.0/kasa_1.3.0_darwin_amd64.tar.gz"
+      sha256 "4777ecd1c6a4b8e7ce87399384280a7c4548354fcd98ea6ac3fdd533f6cefb45"
 
       def install
         bin.install 'kasa'
@@ -29,16 +29,16 @@ class Kasa < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kanmu/kasa/releases/download/v1.2.0/kasa_1.2.0_linux_arm64.tar.gz"
-      sha256 "cf1cf69db015fb8d1a6ecaeaaa3ba02b176312c9ec154857f32b93d0213f1353"
+      url "https://github.com/kanmu/kasa/releases/download/v1.3.0/kasa_1.3.0_linux_arm64.tar.gz"
+      sha256 "6b309469b4e9d1c322f6512e122774bb22aa98709e779ebdaac8f72537f35364"
 
       def install
         bin.install 'kasa'
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kanmu/kasa/releases/download/v1.2.0/kasa_1.2.0_linux_amd64.tar.gz"
-      sha256 "a302615861149e7fd420be1b4abb64627060877cb0d4526cdbdb10b06adb9591"
+      url "https://github.com/kanmu/kasa/releases/download/v1.3.0/kasa_1.3.0_linux_amd64.tar.gz"
+      sha256 "b7ba8acf46ad52be62013e605b95e66d403afc5a9440cad0d36700b8c055cafd"
 
       def install
         bin.install 'kasa'
