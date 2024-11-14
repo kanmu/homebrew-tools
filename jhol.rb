@@ -5,21 +5,21 @@
 class Jhol < Formula
   desc "CLI to display and check Japanese holidays."
   homepage "https://github.com/kanmu/jhol"
-  version "2.2.1"
+  version "3.0.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/kanmu/jhol/releases/download/v2.2.1/jhol_2.2.1_darwin_amd64.tar.gz"
-      sha256 "22d8529dba31490db4f7d62585f68f0434eef6927df00a5ba78000bb33076301"
+    on_intel do
+      url "https://github.com/kanmu/jhol/releases/download/v3.0.0/jhol_3.0.0_darwin_amd64.tar.gz"
+      sha256 "e7ba4b4a12ba6a6c259fbab255f872bd297c7e8e153ac7c026d411921d47f6f7"
 
       def install
         bin.install 'jhol'
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/kanmu/jhol/releases/download/v2.2.1/jhol_2.2.1_darwin_arm64.tar.gz"
-      sha256 "82b78ee6728f22a3fa3a1add8458ca692efae5493157bbea7f2b3e7eca403930"
+    on_arm do
+      url "https://github.com/kanmu/jhol/releases/download/v3.0.0/jhol_3.0.0_darwin_arm64.tar.gz"
+      sha256 "49ee83465240de50e13481b6db18e50c34bcfa4e4096470ac9545bb6ed38dbb7"
 
       def install
         bin.install 'jhol'
@@ -28,20 +28,24 @@ class Jhol < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kanmu/jhol/releases/download/v2.2.1/jhol_2.2.1_linux_arm64.tar.gz"
-      sha256 "08adf79b5eab3b10cb2dcab879f5bc133e2b4a1e0176bfa54e0a55951f536186"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/kanmu/jhol/releases/download/v3.0.0/jhol_3.0.0_linux_amd64.tar.gz"
+        sha256 "021eec9fc27589ee8c997bd81d26774fc4d513ac8d45f43a98159fdb47c2ca37"
 
-      def install
-        bin.install 'jhol'
+        def install
+          bin.install 'jhol'
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kanmu/jhol/releases/download/v2.2.1/jhol_2.2.1_linux_amd64.tar.gz"
-      sha256 "45ab7c5858bcd6d0ba0033af3c9450f635de92e991ddf2e1ce4f834d77115105"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/kanmu/jhol/releases/download/v3.0.0/jhol_3.0.0_linux_arm64.tar.gz"
+        sha256 "14805871801a6034f2d72890aa071b53799d5d1d606ba2a6a932dbbdcd82c733"
 
-      def install
-        bin.install 'jhol'
+        def install
+          bin.install 'jhol'
+        end
       end
     end
   end
