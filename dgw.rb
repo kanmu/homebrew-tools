@@ -5,21 +5,21 @@
 class Dgw < Formula
   desc "dgw generates Golang struct, and simple Table/Row Data Gateway functions from PostgreSQL table metadata"
   homepage "https://github.com/kanmu/dgw"
-  version "1.2.2"
+  version "1.2.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kanmu/dgw/releases/download/v1.2.2/dgw_1.2.2_darwin_amd64.tar.gz"
-      sha256 "e3cdd401bdb464dac88f7dc5c1e2e5176a9337dd956a89eeecfc7e23c8c60919"
+      url "https://github.com/kanmu/dgw/releases/download/v1.2.3/dgw_1.2.3_darwin_amd64.tar.gz"
+      sha256 "486c966d9bf2eb2b3321cbbb66e9a33978e7e99aa4cc298a6b74c057cd2e6498"
 
       def install
         bin.install 'dgw'
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kanmu/dgw/releases/download/v1.2.2/dgw_1.2.2_darwin_arm64.tar.gz"
-      sha256 "444717ed4bde44191051172b107daea12f31aefaa2efafad4694660877564dc3"
+      url "https://github.com/kanmu/dgw/releases/download/v1.2.3/dgw_1.2.3_darwin_arm64.tar.gz"
+      sha256 "89eaebfb760753ac7cb2f9ed696762616e96fcfc612f013ebcbd604adf60657b"
 
       def install
         bin.install 'dgw'
@@ -28,16 +28,16 @@ class Dgw < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/kanmu/dgw/releases/download/v1.2.2/dgw_1.2.2_linux_amd64.tar.gz"
-      sha256 "0419710ac00cead9702d04e3221a2c7ef8e47b35c51efe0fe5de3476a9a87e6f"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kanmu/dgw/releases/download/v1.2.3/dgw_1.2.3_linux_amd64.tar.gz"
+      sha256 "c41fe56107454e83197800cb13d506e9b9591e1ea17b87c309b586ce774f3c60"
       def install
         bin.install 'dgw'
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/kanmu/dgw/releases/download/v1.2.2/dgw_1.2.2_linux_arm64.tar.gz"
-      sha256 "b858fcb7586c781317fec468abf6c305fe99d1b62593205a3b8eae8e17726a93"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kanmu/dgw/releases/download/v1.2.3/dgw_1.2.3_linux_arm64.tar.gz"
+      sha256 "a52ac2925cede7d71f78b53e0e77df14517715d9efba642e926a240b24942651"
       def install
         bin.install 'dgw'
       end
