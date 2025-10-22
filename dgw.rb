@@ -5,21 +5,21 @@
 class Dgw < Formula
   desc "dgw generates Golang struct, and simple Table/Row Data Gateway functions from PostgreSQL table metadata"
   homepage "https://github.com/kanmu/dgw"
-  version "1.2.3"
+  version "1.2.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kanmu/dgw/releases/download/v1.2.3/dgw_1.2.3_darwin_amd64.tar.gz"
-      sha256 "486c966d9bf2eb2b3321cbbb66e9a33978e7e99aa4cc298a6b74c057cd2e6498"
+      url "https://github.com/kanmu/dgw/releases/download/v1.2.4/dgw_1.2.4_darwin_amd64.tar.gz"
+      sha256 "770dc821b23c3270fda01525501fd8c3ab6f05ffd046dd3def19a971e980f8e6"
 
       def install
         bin.install 'dgw'
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kanmu/dgw/releases/download/v1.2.3/dgw_1.2.3_darwin_arm64.tar.gz"
-      sha256 "89eaebfb760753ac7cb2f9ed696762616e96fcfc612f013ebcbd604adf60657b"
+      url "https://github.com/kanmu/dgw/releases/download/v1.2.4/dgw_1.2.4_darwin_arm64.tar.gz"
+      sha256 "6344ea168992e7b002688daec11cb009bfe72354312627e2ac81c08672f2fe34"
 
       def install
         bin.install 'dgw'
@@ -29,15 +29,15 @@ class Dgw < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kanmu/dgw/releases/download/v1.2.3/dgw_1.2.3_linux_amd64.tar.gz"
-      sha256 "c41fe56107454e83197800cb13d506e9b9591e1ea17b87c309b586ce774f3c60"
+      url "https://github.com/kanmu/dgw/releases/download/v1.2.4/dgw_1.2.4_linux_amd64.tar.gz"
+      sha256 "d5081d36a047a3b40b5634e3c9c073d354925ab4cf715cdec401706b80f21a2f"
       def install
         bin.install 'dgw'
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kanmu/dgw/releases/download/v1.2.3/dgw_1.2.3_linux_arm64.tar.gz"
-      sha256 "a52ac2925cede7d71f78b53e0e77df14517715d9efba642e926a240b24942651"
+      url "https://github.com/kanmu/dgw/releases/download/v1.2.4/dgw_1.2.4_linux_arm64.tar.gz"
+      sha256 "1d1c809d6f208659d88cbf2c71733dce76abd74d6778d0c74f7a0187cccc502f"
       def install
         bin.install 'dgw'
       end
