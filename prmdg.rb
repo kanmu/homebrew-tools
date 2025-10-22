@@ -5,21 +5,21 @@
 class Prmdg < Formula
   desc "prmd style JSON Hyper Schema to Go structs, and validators"
   homepage "https://github.com/kanmu/prmdg"
-  version "1.0.1"
+  version "1.0.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kanmu/prmdg/releases/download/v1.0.1/prmdg_1.0.1_darwin_amd64.tar.gz"
-      sha256 "f8b13c1c5c1df9d8a79fc2daaf4dda8419ccb4c1424dd58463cb32ccf888c4f5"
+      url "https://github.com/kanmu/prmdg/releases/download/v1.0.4/prmdg_1.0.4_darwin_amd64.tar.gz"
+      sha256 "71830e03dcaff94c58e8b5d7d5403f497e300b8c5fad4ce6a863cf0d85a6157f"
 
       def install
         bin.install 'prmdg'
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kanmu/prmdg/releases/download/v1.0.1/prmdg_1.0.1_darwin_arm64.tar.gz"
-      sha256 "3d856fd3f04f25a0ab501fa5ba551fb6bf7aea6133b47b015bfe024ad22ed0d1"
+      url "https://github.com/kanmu/prmdg/releases/download/v1.0.4/prmdg_1.0.4_darwin_arm64.tar.gz"
+      sha256 "e27c63ef2c8cb8e699e9d4f51c3412bcf2b425c1f1517a32379cac77d79bcabc"
 
       def install
         bin.install 'prmdg'
@@ -28,18 +28,16 @@ class Prmdg < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/kanmu/prmdg/releases/download/v1.0.1/prmdg_1.0.1_linux_amd64.tar.gz"
-      sha256 "63779acc1a78e25576d5100dea6164735c185102c6014d7d902b8aa56d9bb161"
-
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kanmu/prmdg/releases/download/v1.0.4/prmdg_1.0.4_linux_amd64.tar.gz"
+      sha256 "13fcf37a339c12b6cc91f0280d02a04c88c70992bef485b651dcbffbd20ff748"
       def install
         bin.install 'prmdg'
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kanmu/prmdg/releases/download/v1.0.1/prmdg_1.0.1_linux_arm64.tar.gz"
-      sha256 "8b44ddd806ebf0cf9fff59584396653a898b0dc936626d8de5958ea1f8ebc430"
-
+      url "https://github.com/kanmu/prmdg/releases/download/v1.0.4/prmdg_1.0.4_linux_arm64.tar.gz"
+      sha256 "333c9552a52365c8f20ee76527695fdaa6746b5b8889c88b64c16c60bdc253b3"
       def install
         bin.install 'prmdg'
       end
