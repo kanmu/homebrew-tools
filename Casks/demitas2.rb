@@ -3,33 +3,33 @@ cask "demitas2" do
   name "demitas2"
   desc "Wrapper for ecspresso that creates task definitions at run time."
   homepage "https://github.com/kanmu/demitas2"
-  version "5.2.0"
+  version "5.2.1"
 
   livecheck do
     skip "Auto-generated on release."
   end
 
-  binary "demitas2"
+  binary "dmts"
 
   on_macos do
     on_intel do
       url "https://github.com/kanmu/demitas2/releases/download/v#{version}/demitas2_#{version}_darwin_amd64.tar.gz"
-      sha256 "ea12e553eaff47918be4383878bc297a4d96f23bfe7ca3e5d93c40a11649f25f"
+      sha256 "9fef2e3fffffb1d6f823f415de6bcfaec80fd6de76621eb2302ad5813d89caa1"
     end
     on_arm do
       url "https://github.com/kanmu/demitas2/releases/download/v#{version}/demitas2_#{version}_darwin_arm64.tar.gz"
-      sha256 "dc5ca932285b018f7a9add4e60deb8cc4dfe781eb58f88bafdd9fc75ae53b59d"
+      sha256 "4c620de1ab1d95dcfcdd30facc801147a3a7521c4635d4089f0ebf33b0e3871f"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/kanmu/demitas2/releases/download/v#{version}/demitas2_#{version}_linux_amd64.tar.gz"
-      sha256 "f148ad4407071699899ac7580bc83d234663460853c5c0f94eaf9dbed926c805"
+      sha256 "99bc66d5d05108439697f89125ac59eae9b4bc23d2f44d87ad524d584f519c2e"
     end
     on_arm do
       url "https://github.com/kanmu/demitas2/releases/download/v#{version}/demitas2_#{version}_linux_arm64.tar.gz"
-      sha256 "5dbed8df3707cd8a484b1461a7d072a0be1fa18aa670a07ab6f38f17cde6aec9"
+      sha256 "91737ce48c90f3627334dc5fd1416e83882a0ab6e7e14327b704cc98165f89e9"
     end
   end
 
