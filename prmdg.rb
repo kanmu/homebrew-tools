@@ -5,21 +5,21 @@
 class Prmdg < Formula
   desc "prmd style JSON Hyper Schema to Go structs, and validators"
   homepage "https://github.com/kanmu/prmdg"
-  version "1.0.5"
+  version "1.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kanmu/prmdg/releases/download/v1.0.5/prmdg_1.0.5_darwin_amd64.tar.gz"
-      sha256 "752d1fd1fe179a90959d06dcc02c1fb07f744d0e34cd9bdc8c09809227cdf36a"
+      url "https://github.com/kanmu/prmdg/releases/download/v1.1.0/prmdg_1.1.0_darwin_amd64.tar.gz"
+      sha256 "d367bdb59fb9886783f65c69271e1e456a7ccd5ef15171cd6a4f59478b2bcc50"
 
       def install
         bin.install 'prmdg'
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kanmu/prmdg/releases/download/v1.0.5/prmdg_1.0.5_darwin_arm64.tar.gz"
-      sha256 "b38609fd75f32fbeb952ab57eb580e69a7e1ad88779ed6d4e640f957d34e775c"
+      url "https://github.com/kanmu/prmdg/releases/download/v1.1.0/prmdg_1.1.0_darwin_arm64.tar.gz"
+      sha256 "637891b4d58328eb53ca2c105495706dd1e3213bb66b6007e768b268ab7660f2"
 
       def install
         bin.install 'prmdg'
@@ -29,15 +29,15 @@ class Prmdg < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kanmu/prmdg/releases/download/v1.0.5/prmdg_1.0.5_linux_amd64.tar.gz"
-      sha256 "a575bc95bec4df9294905f855348af6aeeba5fb0914ee67ff0cf96f4dbd4650d"
+      url "https://github.com/kanmu/prmdg/releases/download/v1.1.0/prmdg_1.1.0_linux_amd64.tar.gz"
+      sha256 "490a6b2423fe29a913f673344e7af5c5649e48f986030d92765669a488d1de63"
       def install
         bin.install 'prmdg'
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kanmu/prmdg/releases/download/v1.0.5/prmdg_1.0.5_linux_arm64.tar.gz"
-      sha256 "654e7ba5fa1fcb77a0e27003139b31b43060cb4d17010efef0fb328903b823e7"
+      url "https://github.com/kanmu/prmdg/releases/download/v1.1.0/prmdg_1.1.0_linux_arm64.tar.gz"
+      sha256 "39ea171d9def100f3ff2f26b52211281452678318c42f98216e98c7d6e756586"
       def install
         bin.install 'prmdg'
       end
