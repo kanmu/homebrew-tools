@@ -5,23 +5,23 @@
 class Dgw < Formula
   desc "dgw generates Golang struct, and simple Table/Row Data Gateway functions from PostgreSQL table metadata"
   homepage "https://github.com/kanmu/dgw"
-  version "1.4.0"
+  version "1.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kanmu/dgw/releases/download/v1.4.0/dgw_1.4.0_darwin_amd64.tar.gz"
-      sha256 "8f8e00c1a339b58f50d5a878baddb585f280a387778471b6e221a67a06e0b218"
+      url "https://github.com/kanmu/dgw/releases/download/v1.5.0/dgw_1.5.0_darwin_amd64.tar.gz"
+      sha256 "71d3b5c240248531a0fbdb29e1847fdee9a001efedf3b2255dc1cf8ec2db128e"
 
-      def install
+      define_method(:install) do
         bin.install 'dgw'
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kanmu/dgw/releases/download/v1.4.0/dgw_1.4.0_darwin_arm64.tar.gz"
-      sha256 "007de1d3bda20ff8cb54ea3ff9d347eb8ff520a321c1c1849e95ad0f2abf2f29"
+      url "https://github.com/kanmu/dgw/releases/download/v1.5.0/dgw_1.5.0_darwin_arm64.tar.gz"
+      sha256 "a91136e71210f0f43acddbc4658d5da1e0d94b03415eea5ff8ec3fafc969b8ac"
 
-      def install
+      define_method(:install) do
         bin.install 'dgw'
       end
     end
@@ -29,16 +29,16 @@ class Dgw < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kanmu/dgw/releases/download/v1.4.0/dgw_1.4.0_linux_amd64.tar.gz"
-      sha256 "5a8a5f0c6fd98e37b8298d0633b2f742297b213e37fb21c133c0f62653b390ea"
-      def install
+      url "https://github.com/kanmu/dgw/releases/download/v1.5.0/dgw_1.5.0_linux_amd64.tar.gz"
+      sha256 "2bf74e79e9b98c57eed1a7b5eaff98bc43d540957453b3247d0267bfe938b6cf"
+      define_method(:install) do
         bin.install 'dgw'
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kanmu/dgw/releases/download/v1.4.0/dgw_1.4.0_linux_arm64.tar.gz"
-      sha256 "fe6f246acffe741a6dc22a7b903ecca0566613d0efdfc88fb0dbab7763f65c10"
-      def install
+      url "https://github.com/kanmu/dgw/releases/download/v1.5.0/dgw_1.5.0_linux_arm64.tar.gz"
+      sha256 "8e58d58afab545f58184d24fbe710c00bbe9f4232c86e8bb114a5bd0492f29d9"
+      define_method(:install) do
         bin.install 'dgw'
       end
     end
